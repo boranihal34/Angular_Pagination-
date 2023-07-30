@@ -1,0 +1,5 @@
+<div class="pagination">
+  <button (click)="getPreviousPage()" [disabled]="currentPage === 1">Previous</button>
+  <button *ngFor="let pageNumber of getPageNumbers()" (click)="onPageChange(pageNumber)" [class.active]="pageNumber === currentPage">{{ pageNumber }}</button>
+  <button (click)="getNextPage()" [disabled]="currentPage === totalPages">Next</button>
+</div>
